@@ -173,10 +173,10 @@ header .menu .bar { text-indent: -9999px; }
   main styling starts here
 =================================*/
 
-.banner {
+.banner  {
   width: 100%;
   height: auto;
-  background: url('assets/images/banner.jpg');
+  text-align: center;
 }
 
 
