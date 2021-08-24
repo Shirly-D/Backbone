@@ -109,6 +109,28 @@ li {
 
 header { padding: 36px 0 33px; }
 
+.header-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 img { width: 24%; }
+
+header .menu .bar { text-indent: -9999px; }
+.hamburger { display: none; }
+
+.menu { width: 38%; }
+.menu ul { margin-top: 16px; }
+
+.menu ul li {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.menu li a { 
+  padding: 10px 20px; 
+  color: #4A4A4A;
+}
 
 
 
@@ -119,6 +141,12 @@ header { padding: 36px 0 33px; }
 /*=================================
   main styling starts here
 =================================*/
+
+.banner {
+  width: 100%;
+  height: auto;
+  background: url('/assets/images/banner.jpg');
+}
 
 
 
@@ -149,6 +177,22 @@ header { padding: 36px 0 33px; }
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
+
+
+}  
+
+
+
+@media only screen and (min-width: 996px) {
+
+  /* header start */
+
+  .menu li a:hover {
+    color: #DEF5F0;
+    background-color: #1BBC9B;
+  }
+
+  /* header end */
 
 
 }  
