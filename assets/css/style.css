@@ -114,7 +114,38 @@ header { padding: 36px 0 33px; }
   justify-content: space-between;
 }
 
-h1 img { width: 24%; }
+.header-section h1 { width: 26%; }
+.header-section h1 a { width: 100%; }
+
+h1 figure { 
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1 figure img { width: 100%; }
+
+h1 div {
+  width: 67%;
+  margin-top: 6px;
+  margin-left: 5%;
+  display: inline-block;
+  color: #444444;
+}
+
+h1 .logo-name {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1 .logo-text {
+  display: block;
+  color: #5F5F5F;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
 
 header .menu .bar { text-indent: -9999px; }
 .hamburger { display: none; }
@@ -145,7 +176,7 @@ header .menu .bar { text-indent: -9999px; }
 .banner {
   width: 100%;
   height: auto;
-  background: url('/assets/images/banner.jpg');
+  background: url('assets/images/banner.jpg');
 }
 
 
