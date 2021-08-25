@@ -107,7 +107,7 @@ li {
   Header styling starts here
 =================================*/
 
-header { padding: 36px 0 33px; }
+header { padding: 32px 0 30px; }
 
 .header-section {
   display: flex;
@@ -134,7 +134,7 @@ h1 div {
 }
 
 h1 .logo-name {
-  font-size: 30px;
+  font-size: 27px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -142,7 +142,7 @@ h1 .logo-name {
 h1 .logo-text {
   display: block;
   color: #5F5F5F;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: bold;
   text-transform: capitalize;
 }
@@ -151,17 +151,19 @@ header .menu .bar { text-indent: -9999px; }
 .hamburger { display: none; }
 
 .menu { width: 38%; }
-.menu ul { margin-top: 16px; }
+.menu ul { margin-top: 10px; }
 
 .menu ul li {
-  font-size: 21px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
 .menu li a { 
-  padding: 10px 20px; 
+  padding: 15px 20px; 
   color: #4A4A4A;
 }
+
+.menu li:nth-child(4) a { padding: 15px 13px; }
 
 
 
@@ -173,14 +175,153 @@ header .menu .bar { text-indent: -9999px; }
   main styling starts here
 =================================*/
 
-.banner  {
+.banner .wrapper {
+  max-width: 1518px;
+  width: 100%;
+}
+
+.banner  figure {
   width: 100%;
   height: auto;
   text-align: center;
 }
 
+.portfolio-heading {
+  margin-top: 70px;
+  text-align: center;
+}
 
+.portfolio-heading h2,
+.about-heading h2,
+.contact-heading h2 {
+  margin-bottom: 13px;
+  font-size: 40px;
+  text-transform: capitalize;
+}
 
+.portfolio-heading h2 { color: #444444; }
+
+.portfolio-heading p { 
+  margin-bottom: 48px;
+  color: #737373;
+}
+
+.portfolio-heading p,
+.contact-heading p { 
+  font-size: 21px;
+}
+
+.portfolio-list { 
+  margin-bottom: 60px;
+  text-align: center; 
+}
+.portfolio-list li:first-child { margin-left: 0; }
+
+.portfolio-list li {
+  padding: 15px 10px;
+  margin-left: 1.3%;
+  background-color: #1BBC9B;
+  color: #fff;
+  cursor: pointer;
+  font-size: 19px;  
+  letter-spacing: 0.5px;
+  text-transform: uppercase;    
+}
+
+.portfolio-list .active-filter { 
+  background-color: #16A086;
+  color: #fff;
+}
+
+.portfolio-image {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-image li { 
+  width: 19%; 
+  margin-left: 6%;
+  margin-bottom: 45px;
+}
+
+.portfolio-image li:nth-child(4n - 3) { margin-left: 2.8%; }
+
+.about { 
+  margin-top: 40px;
+  background-color: #16A086; 
+}
+
+.about-heading {
+  padding-top: 70px;
+  text-align: center;
+}
+
+.about-heading h2 { color: #fff; }
+
+.about-heading p {
+  margin-bottom: 60px;
+  color: #FDFDFE;
+  font-size: 19px;
+}
+
+.about .wrapper { width: 77%; }
+
+.about ul {
+  padding-bottom: 99px;
+  display: flex; 
+  justify-content: space-between;
+  }
+
+.about ul li { 
+  width: 28.3%;
+  background-color: #fff; 
+}
+
+.about .about-team { padding: 25px 5%; }
+
+.about-team div {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.about-team div h3 {
+  margin-bottom: 5px;
+  color: #5A5A5A;
+  font-size: 25px;
+}
+
+.about-team div span {
+  margin-bottom: 20px;
+  display: block;
+  color: #5A5A5A;
+  font-style: italic;   
+  font-size: 17px;
+}
+
+.about-team p {
+  color: #858585;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.about-team p::first-letter { text-transform: capitalize; }
+
+.contact {
+  padding-top: 70px;
+  background-color: #ECF0F1;
+}
+
+.contact .wrapper { width: 92%; }
+
+.contact-heading { 
+  color: #444444; 
+  text-align: center;
+}
+
+.contact-heading p {
+  margin-bottom: 65px; 
+  font-size: 19px; 
+}
 
 
 
@@ -221,9 +362,22 @@ header .menu .bar { text-indent: -9999px; }
   .menu li a:hover {
     color: #DEF5F0;
     background-color: #1BBC9B;
+  
   }
 
   /* header end */
 
+  /* main start */
+
+  .portfolio-list li:hover {
+    background-color: #16A086;
+    transition: 1s;
+  }
+
+
+
+
+
+  /* main end */
 
 }  
