@@ -369,7 +369,7 @@ header .menu .bar { text-indent: -9999px; }
 }
 
 .form div:nth-child(4) input {
-  padding: 13px 6%;
+  padding: 15px 7%;
   border: #1BBC9B;
   background-color: #1BBC9B;
   color: #fff;
@@ -377,26 +377,52 @@ header .menu .bar { text-indent: -9999px; }
   text-transform: uppercase;
 }
 
+.form-control.success input { border-color: #2ecc71;}
+.form-control.error input { border-color: #e74c3c;}
+
+.form-control small {
+  display: inherit;
+  font-size: 13px;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  color: #e74c3c;
+  visibility: visible;
+}
+
 .info-detail li {
  padding-left: 4%;
  margin-bottom: 20px;
  display: block; 
  color: #676968;
- font-size: 18px;
+ font-size: 20px;
 }
 
-.info-detail li a { color: #676968; }
+.info-detail li a { 
+  width: 50%;
+  color: #676968; 
+}
 .info-detail li:first-child { text-transform: uppercase; }
 
-.info-detail li:nth-child(2) { 
-  width: 36%;
-  font-size: 17px;
+.info-detail .location { 
+  width: 60%;
+  font-size: 18px;
   letter-spacing: 0.5px;
+  line-height: 25px;
   text-transform: capitalize; 
 }
 
+.info-detail li a::before {
+  margin-right: 4%;
+  font-size: 18px;
+  font-family: "FontAwesome";
+}
 
-
+.location a::before { content: "\f041"; }
+.phone a::before { content: "\f098"; }
+.fax a::before { content: "\f02f"; }
+.mail a::before { content: "\f003"; }
 
 
 /*=================================
@@ -407,6 +433,46 @@ header .menu .bar { text-indent: -9999px; }
   footer styling starts here
 =================================*/ 
 
+footer {
+  padding: 31px 0;
+  background-color: #2D3E50;
+  color: #DADBE1;  
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright { 
+  width: 35%;
+  margin-top: 16px;
+  font-size: 19px; 
+}
+
+.copyright p:last-child { border-right: none; }
+
+.copyright p { 
+  padding-right: 1%;
+  border-right: 2px solid #fff;
+  display: inline-block; 
+  text-transform: capitalize;
+}
+
+.footer-section div:nth-child(2) a {
+  text-indent: -9999px;
+}
+
+.footer-section div:nth-child(2) a::before {
+  content: "\f077";
+  padding: 17px;
+  background-color: #1BBC9B;
+  color: #fff;
+  float: right;
+  font-size: 25px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+}
 
 
 
@@ -419,12 +485,46 @@ header .menu .bar { text-indent: -9999px; }
 
 /*media query starts*/
 /*media query for 995px starts here*/
+@media only screen and (max-width: 1200px) {
+
+
+
+}  
+@media only screen and (max-width: 1024px) {
+
+
+
+}  
 @media only screen and (max-width: 995px) {
 
 
 
 }  
+@media only screen and (max-width: 768px) {
 
+
+
+}  
+@media only screen and (max-width: 504px) {
+
+
+
+}  
+@media only screen and (max-width: 480px) {
+
+
+
+}  
+@media only screen and (max-width: 375px) {
+
+
+
+}  
+@media only screen and (max-width: 320px) {
+
+
+
+}  
 
 
 @media only screen and (min-width: 996px) {
@@ -451,9 +551,21 @@ header .menu .bar { text-indent: -9999px; }
     transition: 1s;
   }
 
-
-
+  .info-detail li a:hover {
+    color: #1BBC9B;
+    transition: 1s;
+  }
 
   /* main end */
+
+  /* footer start */
+
+  .footer-section div:nth-child(2) a:hover::before {
+    background-color: #858585;
+    color: #fff;
+    transition: 1s;
+  }
+
+  /* footer end */
 
 }  
