@@ -323,6 +323,31 @@ header .menu .bar { text-indent: -9999px; }
   font-size: 19px; 
 }
 
+.contact-info { display: flex; }
+.form { width: 77%; }
+
+.form-control {
+  width: 47%;
+  display: inline-block;
+}
+
+.form-control input {
+  width: 98.4%;
+  height: 54px;
+  border: 3px solid #BEC3C7;
+}
+
+.form-control textarea { width: 100%; }
+
+.form-control:nth-child(2) { margin-left: 5%; }
+
+.form-control:nth-child(3) { 
+  width: 100%; 
+  border: 3px solid #BEC3C7;
+  margin-top: 30px;
+}
+
+
 
 
 
