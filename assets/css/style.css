@@ -233,6 +233,9 @@ header .menu .bar { text-indent: -9999px; }
   color: #fff;
 }
 
+.none { display: none; }
+.active { display: block; }
+
 .portfolio-image {
   display: flex;
   flex-wrap: wrap;
@@ -612,10 +615,10 @@ footer {
   .bar.ham-active::before { transform: rotate(-45deg); }
 
   .menu ul {
-    width: 90%;
+    width: 100%;
     height: auto;
     position: absolute;
-    top: 26px;
+    top: 99px;
     left: -100%;
     z-index: 5;
     background: #46525C;
