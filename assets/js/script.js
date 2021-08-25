@@ -1,3 +1,4 @@
+// hamburger menu
 var menu = document.querySelector('.menu');
 var bar = document.querySelector('.bar');
 var navUl = menu.querySelector('ul');
@@ -7,7 +8,7 @@ menu.addEventListener('click', function(e){
     navUl.classList.toggle('active');
 })
 
-
+// form validation
 var form = document.querySelector('.form');
 var fname = document.querySelector('.name');
 var email = document.querySelector('.email');
@@ -55,6 +56,36 @@ function isEmail(emailInput) {
     return /^[A-Za-z_]{3,}[0-9]{2,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/.test(emailInput);
 }
 
+// filter function
+
+var filterElem = document.querySelector('.portfolio-list');
+var filterList = filterElem.querySelectorAll("li");
+for (var i = 0; i < filterList.length; i++){
+    filterList[i].addEventListener('click', function(e){
+        if (this == e.target) {
+            var elem = e.target.innerHTML;
+            for (var k = 0; k < filterList.length; k++){
+                filterList[k].classList.remove("active-filter");
+            }
+            e.target.classList.add("active-filter");
+            filter(elem);
+        }
+    })
+}
+
+function filter(elemFilter) {
+    var element = document.querySelectorAll('.filter-image');
+    for (var j = 0; j < element.length; j++) {
+        var a = element[j].getAttribute("data-gallery");
+        element[j].classList.remove('active');
+        element[j].classList.remove('none');
+        if (elemFilter == a || elemFilter == "all") {
+            element[j].className += " active";
+        } else {
+            element[j].className += " none";
+        }
+    }
+}
 
 
 
