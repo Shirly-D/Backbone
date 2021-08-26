@@ -34,6 +34,8 @@
 
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
+  <link rel="stylesheet" media="screen" href="assets/vendor/slick/slick-theme.css">
+  <link rel="stylesheet" media="screen" href="assets/vendor/slick/slick.css">
 
   <!-- html5shiv aka html5 shim. Supporting HTML5 and CSS for IE browsers less than IE9. -->
   <!--[if lt IE 9]>  
@@ -81,9 +83,23 @@
     <main>
       <div class="banner">
         <div class="wrapper">
-          <figure>
-            <img src="assets/images/banner.jpg" alt="Banner">
-          </figure>
+          <ul class="slider">
+            <li class="slide active-slider">
+              <figure>
+                <img src="assets/images/banner.jpg" alt="Banner">
+              </figure>
+            </li>
+            <li class="slide">
+              <figure>
+                <img src="assets/images/banner.jpg" alt="Banner1">
+              </figure>
+            </li>
+            <li class="slide">
+              <figure>
+                <img src="assets/images/banner.jpg" alt="Banner2">
+              </figure>
+            </li>
+          </ul>
         </div>
       </div>
       <section class="portfolio">
@@ -93,16 +109,22 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <ul class="portfolio-list">
-            <li class="active-filter">all</li>
-            <li>web design</li>
-            <li>graphic design</li>
-            <li>flat design</li>
+            <li class="active-filter"><a href="#fixme" title="All">all</a></li>
+            <li><a href="#fixme" title="Web Design">web design</a></li>
+            <li><a href="#fixme" title="Graphic Design">graphic design</a></li>
+            <li><a href="#fixme" title="Flat Design">flat design</a></li>
           </ul>
           <ul class="portfolio-image">
             <li class="filter-image" data-gallery="web design">
               <figure>
                 <img src="assets/images/Bak-One-Template-PSD---cssauthor_24.jpg" alt="Camera">
               </figure>
+              <div class="overlay">
+                <figure>
+                  <img src="assets/images/search.png" alt="Search">
+                </figure>
+                <p>example title <span>web design</span></p>
+              </div>
             </li>
             <li class="filter-image" data-gallery="web design">
               <figure>
@@ -113,31 +135,67 @@
               <figure>
                 <img src="assets/images/setting.jpg" alt="Setting">
               </figure>
+              <div class="overlay">
+                <figure>
+                  <img src="assets/images/search.png" alt="Search">
+                </figure>
+                <p>example title <span>flat design</span></p>
+              </div>
             </li>
             <li class="filter-image" data-gallery="graphic design">
               <figure>
                 <img src="assets/images/navigation.jpg" alt="Navigation">
               </figure>
+              <div class="overlay">
+                <figure>
+                  <img src="assets/images/search.png" alt="Search">
+                </figure>
+                <p>example title <span>graphic design</span></p>
+              </div>
             </li>
             <li class="filter-image" data-gallery="flat design">
               <figure>
                 <img src="assets/images/call.jpg" alt="Call">
               </figure>
+              <div class="overlay">
+                <figure>
+                  <img src="assets/images/search.png" alt="Search">
+                </figure>
+                <p>example title <span>flat design</span></p>
+              </div>
             </li>
             <li class="filter-image" data-gallery="graphic design">
               <figure>
                 <img src="assets/images/gems.jpg" alt="Gems">
               </figure>
+              <div class="overlay">
+                <figure>
+                  <img src="assets/images/search.png" alt="Search">
+                </figure>
+                <p>example title <span>graphic design</span></p>
+              </div>
             </li>
             <li class="filter-image" data-gallery="web design">
               <figure>
                 <img src="assets/images/camera.jpg" alt="Camera">
               </figure>
+              <div class="overlay">
+                <figure>
+                  <img src="assets/images/search.png" alt="Search">
+                </figure>
+                <p>example title <span>web design</span></p>
+              </div>
             </li>
             <li class="filter-image" data-gallery="web design">
               <figure>
                 <img src="assets/images/music.jpg" alt="Music">
               </figure>
+              <div class="overlay">
+                <figure>
+                  <img src="assets/images/search.png" alt="Search">
+                </figure>
+                <p>example title <span>web design</span></p>
+              </div>
             </li>
           </ul>
         </div>
@@ -151,8 +209,13 @@
           <ul>
             <li>
               <figure>
-                <img src="assets/images/profile1.jpg" alt="profile1">
+                <img src="assets/images/profile1.jpg" alt="Profile1">
               </figure>
+              <div class="about-overlay">
+                <figure>
+                  <img src="assets/images/sociallinks.png" alt="Sociallinks">
+                </figure>
+              </div>
               <div class="about-team">
                 <div>
                   <h3>melannie doe</h3>
@@ -164,8 +227,13 @@
             </li>
             <li>
               <figure>
-                <img src="assets/images/profile2.jpg" alt="profile2">
+                <img src="assets/images/profile2.jpg" alt="Profile2">
               </figure>
+              <div class="about-overlay">
+                <figure>
+                  <img src="assets/images/sociallinks.png" alt="Sociallinks">
+                </figure>
+              </div>
               <div class="about-team">
                 <div>
                   <h3>jhonnie doe</h3>
@@ -177,8 +245,13 @@
             </li>
             <li>
               <figure>
-                <img src="assets/images/profile3.png" alt="profile3">
+                <img src="assets/images/profile3.png" alt="Profile3">
               </figure>
+              <div class="about-overlay">
+                <figure>
+                  <img src="assets/images/sociallinks.png" alt="Sociallinks">
+                </figure>
+              </div>
               <div class="about-team">
                 <div>
                   <h3>daniel doe</h3>
@@ -201,24 +274,30 @@
             <form action="#fixme" method="POST" class="form">
               <div class="form-control">
                 <input type="text" name="name" class="name" placeholder="Your name">
-                <small>error message</small>
+                <span>error message</span>
               </div>
               <div class="form-control">
                 <input type="text" name="email" class="email" placeholder="Your email">
-                <small>error message</small>
+                <span>error message</span>
               </div>
               <div class="form-control">
-                <input type="text" name="message" class="message" placeholder="Message">
-                <small>error message</small>
+                <textarea name="message" cols="30" rows="10" placeholder="Your message">text</textarea>
+                <span>error message</span>
               </div>
               <div>
                 <input type="submit" name="submit" class="submit" value="Submit">
               </div>
             </form>
             <ul class="info-detail">
-              <li><h3>information</h3></li>
-              <li class="location"><a href="#fixme" title="Location" class="location">bak-One company 12345 hollywood bvld street los
-                  angeles, california</a></li>
+              <li>
+                <h3>information</h3>
+              </li>
+              <li class="location">
+                <address>
+                  bak-One company 12345 hollywood bvld street los
+                  angeles, california
+                </address>
+              </li>
               <li class="phone"><a href="tel:+444(Phone)12345">+444(Phone)12345</a></li>
               <li class="fax"><a href="fax:+123(FAX)0011223">+123(FAX)0011223</a></li>
               <li class="mail"><a href="mailto:info@bak-onecompany.com">info@bak-onecompany.com</a></li>
@@ -249,6 +328,8 @@
   </div>
   <!--container end-->
 
+  <script src="assets/vendor/jquery-3.4.1.min.js"></script>
+  <script src="assets/vendor/slick/slick.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
