@@ -175,6 +175,8 @@ header .menu .bar { text-indent: -9999px; }
   main styling starts here
 =================================*/
 
+.banner { position: relative; }
+
 .banner .wrapper {
   max-width: 1518px;
   width: 100%;
@@ -186,7 +188,66 @@ header .menu .bar { text-indent: -9999px; }
   text-align: center;
 }
 
+.slider .slide { display: none; }
 
+.slider li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.slider .slick-prev:before,
+.slider .slick-next:before {
+  opacity: 0;
+}
+
+.slider .slick-dots {
+  bottom: -23%;
+}
+.slider .slick-dots li {
+  margin: 0 10px;
+}
+
+.slider .slick-dots li.slick-active button:before,
+.slider li.slick-active button:before {
+  opacity: 0.7;
+  color: white;
+}
+
+.slider .slick-dots li button:before {
+  margin: 77px 20px;
+  font-size: 60px;
+  color: #dadada;
+}
+
+.prev-arrow,
+.next-arrow { text-indent: -9999px; }
+
+.prev-arrow::before {
+  content: "\f053";
+  position: absolute;
+  top: 290px;
+  left: 3%;
+  color: #FFFFFF;
+  font-size: 40px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+  float: left;
+}
+
+.next-arrow::before {
+  content: "\f054";
+  position: absolute;
+  top: 290px;
+  right: 3%;
+  color: #FFFFFF;
+  font-size: 40px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+  float: right;
+}
 
 .portfolio-heading {
   margin-top: 70px;
@@ -752,7 +813,13 @@ footer {
   .menu li a:hover {
     color: #DEF5F0;
     background-color: #1BBC9B;
-  
+  }
+
+  .prev-arrow:hover::before,
+  .next-arrow:hover::before {
+    width: 2.5%;
+    background-color: #1BBC9B;
+    transition: 1s;
   }
 
   /* header end */
