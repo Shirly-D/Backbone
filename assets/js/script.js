@@ -13,7 +13,7 @@ var form = document.querySelector('.form');
 var fname = document.querySelector('.name');
 var email = document.querySelector('.email');
 var message = document.querySelector('.message');
-var nameLength = /^[A-Za-z. ]{6,30}$/;
+var nameLength = /^[A-Za-z. ]{3,30}$/;
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -21,23 +21,24 @@ form.addEventListener('submit', function(e){
 })
 
 function inputValue() {
-    if(fname.value.length < 1) {
+    if(fname.value == "") {
         errorMsg(fname, '*This field is required');
-    }
-    if(!nameLength.test(fname.value)) {
+    } else if(!nameLength.test(fname.value)  || fname.value.length < 1) {
         errorMsg(fname, 'Enter valid name');
     } else {
         successMsg(fname);
     }
-    if(!nameLength.test(email.value)) {
+    if(email.value == "") {
         errorMsg(email, '*This field is required');
-    } else if (!isEmail(email.value)) {
+    } else if(!nameLength.test(email.value) || (!isEmail(email.value))) {
         errorMsg(email, 'Email is invalid');
     } else {
         successMsg(email);
     } 
-    if(!nameLength.test(message.value)) {
+    if(message.value == "") {
         textareaErr( message, '*This field is required');
+    } else if(!nameLength.test(message.value) || message.value.length > 1) {
+        textareaErr(message, 'Message should be atleast 10 words');
     } else {
         successTextarea(message);
     }
