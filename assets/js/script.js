@@ -13,7 +13,7 @@ var form = document.querySelector('.form');
 var fname = document.querySelector('.name');
 var email = document.querySelector('.email');
 var message = document.querySelector('.message');
-var nameLength = /^[A-Za-z. ]{3,30}$/;
+var nameLength = /^[A-Za-z. ]{6,30}$/;
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -34,17 +34,25 @@ function inputValue() {
         successMsg(email);
     } 
     if(!nameLength.test(message.value)) {
-        errorMsg( message, '*This field is required');
+        textareaErr( message, '*This field is required');
     } else {
-        successMsg(message);
+        successTextarea(message);
     }
 }
 
 function errorMsg(input, message) {
     var formControl = input.parentElement;
-    var small = formControl.querySelector('small');
+    var small = formControl.querySelector('span');
     small.innerText = message;
     formControl.className += ' form-control error';
+}
+
+function textareaErr(textarea, message) {
+    var formControl = textarea.parentElement;
+    var span = formControl.querySelector('span');
+    span.innerText = message;
+    formControl.className += ' form-control error';
+
 }
 
 function successMsg(input) {
@@ -52,8 +60,13 @@ function successMsg(input) {
     formControl.className = ' form-control success';
 }
 
+function successTextarea(textarea) {
+    var formControl = textarea.parentElement;
+    formControl.className = ' form-control success';
+}
+
 function isEmail(emailInput) {
-    return /^[A-Za-z_]{3,}[0-9]{2,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/.test(emailInput);
+    return /^[\w]{1,}[\w.+-]{0,}@[\w-]{1,}([.][a-zA-Z]{2,3}|[.][\w-]{2,3}[.][a-zA-Z]{2,3})$/.test(emailInput);
 }
 
 // filter function
