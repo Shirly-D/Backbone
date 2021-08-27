@@ -155,7 +155,11 @@ h1 .logo-text {
 header .menu .bar { text-indent: -9999px; }
 .hamburger { display: none; }
 
-.menu { width: 38%; }
+.menu { 
+  width: 70%; 
+  text-align: end;
+}
+
 .menu ul { margin-top: 10px; }
 
 .menu ul li {
@@ -541,14 +545,19 @@ header .menu .bar { text-indent: -9999px; }
 }
 
 .form-control:nth-child(2) { margin-left: 4%; }
+.form-control:nth-child(3) { width: 99%; }
 
 .form-control textarea {
-  width: 606px;
+  width: 94%;
   height: 200px;
+  padding: 10px 0 0 5%;
   border: 3px solid #BEC3C7;
-  margin: 0px;
+  resize: none;
+}
+
+.form-control textarea::placeholder { 
   color: #CFCFCF;
-  font-size: 18px;
+  font-size: 20px;
   font-style: italic;
   font-weight: bold;
 }
@@ -704,7 +713,6 @@ footer {
 @media only screen and (max-width: 1024px) {
 
   h1 .logo-text { font-size: 13px; }
-  .menu { width: 41%; }
   .menu li a { padding: 12px 10px; }
   .about .wrapper { width: 87%; }
   .about-team p { text-align: center; }
@@ -728,15 +736,15 @@ footer {
 }  
 @media only screen and (max-width: 995px) {
 
-  .menu { width: 43%; }
+  .menu { font-size: 14px; }
   .copyright { font-size: 13px; }
 
 }  
 @media only screen and (max-width: 768px) {
 
   .header-section h1 { width: 36%; }
+  .menu { font-size: 12px; }
   h1 div { margin-top: 13px; }
-  .menu { width: 55%; }
   .about ul li { width: 30%; }
   .about-team p { font-size: 17px; }
 
@@ -745,13 +753,19 @@ footer {
     font-size: 14px;
   }
 
-}  
-@media only screen and (max-width: 504px) {
+}
+
+@media only screen and (max-width: 625px) {
+
+  .menu ul li { font-size: 14px; }
+  .menu li a { padding: 12px 9px; }
+}
+
+@media only screen and (max-width: 525px) {
 
   .header-section h1 { width: 55%; }
   h1 .logo-name { font-size: 18px; }
   h1 .logo-text { font-size: 12px; }
-  .menu { width: 14%; }
 
   .hamburger {
     width: 64%;
@@ -834,7 +848,7 @@ footer {
     width: 100%;
     height: auto;
     position: absolute;
-    top: 99px;
+    top: 146px;
     left: -100%;
     z-index: 5;
     background: #46525C;
@@ -855,7 +869,7 @@ footer {
 
   .menu ul li {
     border-right: none;
-    margin: 10px 0;
+    margin: 14px 0;
     display: block;
     font-size: 13px;
     text-align: center;
