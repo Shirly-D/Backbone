@@ -578,6 +578,8 @@ header .menu .bar { text-indent: -9999px; }
 
 .form-control.success input { border-color: #2ECC71;}
 .form-control.error input { border-color: #E74C3C;}
+.form-control.success textarea { border-color: #2ECC71;}
+.form-control.error textarea { border-color: #E74C3C;}
 
 .form-control span {
   display: inherit;
