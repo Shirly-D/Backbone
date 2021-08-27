@@ -93,13 +93,28 @@ var slider = document.querySelector('.slider');
 
 if (slider) {
 	$(document).ready(function() {
-		$('.slider').slick({
+		$('.slider').slick({    
 			dots: true,
 			autoplay: true,
-			autoplaySpeed: 3000,
+            arrows:true,
+            prevArrow:'<button type="button" class="slick-prev"></button>',
+            nextArrow:'<button type="button" class="slick-next"></button>',
+            slidesToShow:1,
+            slidesToScroll:1
 		});
 	});
+    $('.slider').click(function() {
+        $slideshow.slick('slickNext');
+    });
 }
+
+// scroll top
+
+var scrollTop = document.querySelector('.arrow');
+scrollTop.addEventListener('click', function(e){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+})
 
 
 
