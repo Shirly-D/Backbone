@@ -887,6 +887,12 @@ footer {
   .menu ul li a { color: #fff; }
   .menu:hover nav ul { left: 0; }
 
+  .prev-arrow::before,
+  .next-arrow::before {
+    top: 115px;
+    font-size: 28px;
+  }
+
   .portfolio-heading h2, 
   .about-heading h2,
   .contact-heading h2 { font-size: 36px; }
@@ -942,6 +948,14 @@ footer {
 }  
 @media only screen and (max-width: 480px) {
 
+  .menu ul { top: 135px; }
+
+  .prev-arrow::before,
+  .next-arrow::before {
+    top: 115px;
+    font-size: 28px;
+  }
+
   .about ul li { width: 74%; }
 
   .form-control { 
@@ -955,6 +969,7 @@ footer {
   }
 
   .form-control:nth-child(3) { margin: 0; }
+  .info-detail li address { margin: 0 auto; }
 
 }  
 @media only screen and (max-width: 375px) {
@@ -967,6 +982,12 @@ footer {
   h1 .logo-text { font-size: 11px; }
   .menu { width: 10%; }
 
+  .prev-arrow::before,
+  .next-arrow::before {
+    top: 85px;
+    font-size: 28px;
+  }
+
   .portfolio-heading p, 
   .contact-heading p { font-size: 14px; }
 
@@ -976,14 +997,14 @@ footer {
     display: flex; 
   }
 
+  .portfolio-list li { padding: 12px 10px; }
+
   .portfolio-image { 
     -webkit-box-pack: center; 
        -ms-flex-pack: center; 
-     justify-content: center; 
   }
 
   .portfolio-image li:nth-child(4n - 3) { margin-left: 6%; }
-  .portfolio-image li:nth-child(3n - 2) { margin-left: 1%; }
   .portfolio-image li { width: 26%; }
   .form-control:nth-child(2) { margin-left: 0; }
 
@@ -991,7 +1012,28 @@ footer {
 @media only screen and (max-width: 320px) {
 
   h1 .logo-text { font-size: 9px; }
+  .menu ul { top: 105px; }
+  .slick-dots li button:before { top: 29px; }
+  .slider .slick-dots li button:before { font-size: 42px; }
+  
+  .prev-arrow::before,
+  .next-arrow::before {
+    top: 76px;
+    font-size: 17px;
+  }
+
+  .portfolio-list li {
+    padding: 12px 3px;
+    margin: 0 auto;
+    font-size: 10px;
+  }
+
   .about ul li { width: 90%; }
+
+  .info-detail li address {
+    width: 80%;
+    margin: 0 auto;
+  }
 
   .copyright p { 
     border-right: 0;
