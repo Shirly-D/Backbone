@@ -435,9 +435,11 @@ header .menu .bar { text-indent: -9999px; }
 }
 
 .about-overlay figure {
-  width: 60%;
+  width: 93%;
+  opacity: 0.8;
 }
 
+.about-overlay figure img { height: 60px; }
 .about .about-team { padding: 25px 5%; }
 
 .about-team div {
@@ -1041,9 +1043,9 @@ footer {
   .filter-image .overlay figure,
   .filter-image .overlay p { opacity: 1; }
 
-  .about li figure:hover .about-overlay figure { 
+  .about li .overlay-effect:hover .about-overlay{ 
     cursor: pointer;
-    opacity: 0.9; 
+    opacity: 1; 
   }
 
   .form div:nth-child(4) input:hover {
