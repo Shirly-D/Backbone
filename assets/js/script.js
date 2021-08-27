@@ -75,7 +75,8 @@ function isEmail(emailInput) {
 // filter function
 
 var filterElem = document.querySelector('.portfolio-list');
-var filterList = filterElem.querySelectorAll("li");
+var filterTabs = filterElem.querySelectorAll("li");
+var filterList = filterElem.querySelectorAll("a");
 for (var i = 0; i < filterList.length; i++){
     filterList[i].addEventListener('click', function(e){
         if (this == e.target) {
