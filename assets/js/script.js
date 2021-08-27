@@ -87,6 +87,21 @@ function filter(elemFilter) {
     }
 }
 
+// slick slider 
+
+var slider = document.querySelector('.slider');
+
+if (slider) {
+	$(document).ready(function() {
+		$('.slider').slick({
+			dots: true,
+			autoplay: true,
+			autoplaySpeed: 3000,
+		});
+	});
+}
+
+
 
 
 
