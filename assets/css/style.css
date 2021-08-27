@@ -198,34 +198,36 @@ header .menu .bar { text-indent: -9999px; }
   color: #fff;
 }
 
-.slider .slick-prev:before,
+/* .slider .slick-prev:before,
 .slider .slick-next:before {
   opacity: 0;
-}
+} */
 
 .slider .slick-dots {
-  bottom: -23%;
-}
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
 .slider .slick-dots li {
-  margin: 0 10px;
-}
-
+    margin: 0 1%;
+  }
+  
 .slider .slick-dots li.slick-active button:before,
 .slider li.slick-active button:before {
-  opacity: 0.7;
-  color: white;
+  opacity: .7;
+  color: #FFFFFF
 }
-
+  
 .slider .slick-dots li button:before {
-  margin: 77px 20px;
+  margin: 30px 5%;
   font-size: 60px;
-  color: #dadada;
+  color: #DADADA;
 }
 
 .prev-arrow,
 .next-arrow { text-indent: -9999px; }
 
-.prev-arrow::before {
+/* .prev-arrow::before {
   content: "\f053";
   position: absolute;
   top: 290px;
@@ -247,7 +249,7 @@ header .menu .bar { text-indent: -9999px; }
   font-family: "FontAwesome";
   text-indent: 0;
   float: right;
-}
+} */
 
 .portfolio-heading {
   margin-top: 70px;
