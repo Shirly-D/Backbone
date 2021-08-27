@@ -21,14 +21,17 @@ form.addEventListener('submit', function(e){
 })
 
 function inputValue() {
-    if(!nameLength.test(fname.value)) {
+    if(fname.value.length < 1) {
         errorMsg(fname, '*This field is required');
+    }
+    if(!nameLength.test(fname.value)) {
+        errorMsg(fname, 'Enter valid name');
     } else {
         successMsg(fname);
     }
     if(!nameLength.test(email.value)) {
         errorMsg(email, '*This field is required');
-    } else if (!isEmail(emailInput)) {
+    } else if (!isEmail(email.value)) {
         errorMsg(email, 'Email is invalid');
     } else {
         successMsg(email);
