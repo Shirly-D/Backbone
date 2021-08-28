@@ -121,9 +121,7 @@ if (slider) {
             slidesToScroll:1
 		});
 	});
-    $('.slider').click(function() {
-        $slideshow.slick('slickNext');
-    });
+
 }
 
 // scroll top
